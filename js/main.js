@@ -1,3 +1,45 @@
+/* pojava */
+function pojava() {
+  var isti = document.querySelectorAll(".isti");
+  var ekran = window.innerHeight / 1.3;
+  isti.forEach(i => {
+    var pozicija = i.getBoundingClientRect().top;
+    if (pozicija < ekran) {
+      i.classList.add("pojava");
+    }
+  });
+  var autorh3 = document.getElementById("hatri");
+  var pozicija2 = autorh3.getBoundingClientRect().top;
+  if (pozicija2 < ekran) {
+    autorh3.style.opacity = "1";
+    autorh3.style.marginLeft = "0px";
+  }
+  var text = document.getElementById("text");
+  var pozicija3 = text.getBoundingClientRect().top;
+  if (pozicija3 < ekran) {
+    text.style.opacity = "1";
+    text.style.marginLeft = "60px";
+  }
+  var slika = document.querySelector("#oautoru img");
+  var pozicija4 = slika.getBoundingClientRect().top;
+  if (pozicija4 < ekran) {
+    slika.style.opacity = "1";
+    slika.style.marginRight = "150px";
+  }
+  var kontakt = document.querySelector("#kontakt h3");
+  var pozicija5 = kontakt.getBoundingClientRect().top;
+  if (pozicija5 < ekran) {
+    kontakt.style.opacity = "1";
+    kontakt.style.marginLeft = "0px";
+  }
+  var tabela = document.querySelector("table");
+  var pozicija6 = tabela.getBoundingClientRect().top;
+  if (pozicija6 < ekran) {
+    tabela.style.opacity = "1";
+    tabela.style.marginRight = "0px";
+  }
+}
+window.addEventListener("scroll", pojava);
 window.onload = function() {
   //ime
   var ime = document.getElementById("ime");
