@@ -350,3 +350,9 @@ textarea:focus {
 #vise {
   display: none;
 }
+.fa-check {
+  font-size: 1.3em;
+  color: rgb(0, 161, 0);
+  font-weight: bold;
+}
+
